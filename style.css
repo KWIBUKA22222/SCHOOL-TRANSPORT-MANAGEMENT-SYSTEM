@@ -1,0 +1,331 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #073b74;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 25px 15px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 21px;
+}
+
+.school {
+    text-align: center;
+    color: #cbd5e1;
+    margin: 10px 0 35px;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 15px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    color: white;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: #f4b400;
+    color: #073b74;
+}
+
+.sidebar-footer {
+    position: absolute;
+    bottom: 25px;
+    font-size: 12px;
+    text-align: center;
+    width: 85%;
+    line-height: 1.8;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 30px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #073b74;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #64748b;
+}
+
+.admin {
+    background: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.welcome {
+    background: #073b74;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.welcome h2 {
+    margin-bottom: 10px;
+}
+
+.section-title {
+    margin-bottom: 20px;
+    color: #073b74;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #f4b400;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.stat-card h3 {
+    font-size: 15px;
+    color: #64748b;
+}
+
+.stat-card p {
+    font-size: 35px;
+    font-weight: bold;
+    color: #073b74;
+    margin-top: 15px;
+}
+
+.information {
+    background: white;
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 10px;
+    line-height: 1.8;
+}
+
+.information h2 {
+    color: #073b74;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+@media(max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar-footer {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    header {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+}
+
+/* STUDENT MANAGEMENT */
+
+.form-container,
+.table-container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.form-container h2,
+.table-container h2 {
+    color: #073b74;
+    margin-bottom: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-grid label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-grid input,
+.form-grid select,
+.search-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+}
+
+.form-grid input:focus,
+.form-grid select:focus {
+    border-color: #073b74;
+}
+
+.btn-primary {
+    background: #073b74;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn-primary:hover {
+    background: #f4b400;
+    color: #073b74;
+}
+
+.btn-cancel {
+    display: inline-block;
+    background: #64748b;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-form input {
+    flex: 1;
+}
+
+.search-form .btn-primary {
+    margin-top: 0;
+}
+
+.search-form .btn-cancel {
+    margin-top: 0;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 850px;
+}
+
+th {
+    background: #073b74;
+    color: white;
+    padding: 13px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+tr:hover {
+    background: #f8fafc;
+}
+
+.edit-btn {
+    display: inline-block;
+    background: #f4b400;
+    color: #073b74;
+    padding: 7px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.delete-btn {
+    background: #dc2626;
+    color: white;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.alert {
+    padding: 14px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+.alert.success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.alert.error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+@media(max-width: 700px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-form {
+        flex-wrap: wrap;
+    }
+}

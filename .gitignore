@@ -1,0 +1,8 @@
+.env
+.env.*
+!.env.example
+
+config/secrets.php
+*.log
+.DS_Store
+Thumbs.db
